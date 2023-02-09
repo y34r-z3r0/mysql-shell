@@ -4,14 +4,14 @@
 - [ ] Cluster
 - [ ] Cluster Diagnostic
 - [ ] Create Database
-- [X] Backup
+- [X] Dump
 - [ ] Remove Database
 - [X] Recovery
 - [ ] Check Database
 - [ ] Authomatisation by cron
 - [ ] All Diagnostics (?)
 
-# Backup
+# Dump
 
 #### Command
 `mysqlsh`
