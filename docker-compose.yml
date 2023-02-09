@@ -1,0 +1,41 @@
+version: '2.4'
+services:
+  ugr-mysql:
+    extends:
+      file:    extends/mysql.yml
+      service: mysql
+    container_name: master-mysql
+    hostname:       master-mysql
+    command: ['--server-id=2']
+    volumes:
+    - type:   volume
+      source: master_mysql
+      target: /var/lib/mysql
+    networks: ['y34rz3r0_network']
+
+  iva-mysql:
+    extends:
+      file:    extends/mysql.yml
+      service: mysql
+    container_name: slave-mysql
+    hostname:       slave-mysql
+    command: ['--server-id=3']
+    volumes:
+    - type:   volume
+      source: slave_mysql
+      target: /var/lib/mysql
+    networks: ['y34rz3r0_network']
+
+    
+volumes:
+  master_mysql:
+    name:   master_mysql
+    driver: local
+  slave_mysql:
+    name:   slave_mysql
+    driver: local
+
+networks:
+ y34rz3r0_network:
+    name:   y34rz4r0_network
+    driver: bridge
