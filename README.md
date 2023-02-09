@@ -3,11 +3,11 @@
 - [ ] MySQL Shell Method Description 
 - [ ] Cluster
 - [ ] Cluster Diagnostic
-- [ ] Create Database
+- [ ] Create Test Database
 - [X] Dump
-- [ ] Remove Database
+- [ ] Remove Test Database
 - [X] Recovery
-- [ ] Check Database
+- [ ] Check Test Database
 - [ ] Authomatisation by cron
 - [ ] All Diagnostics (?)
 
