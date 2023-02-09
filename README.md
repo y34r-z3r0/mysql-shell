@@ -8,6 +8,7 @@
 - [ ] Remove Database
 - [X] Recovery
 - [ ] Check Database
+- [ ] Authomatisation by cron
 - [ ] All Diagnostics (?)
 
 # Backup
