@@ -69,10 +69,3 @@ util.loadDump("/mnt/mysql_dump", {dryRun: true})
 ```
 util.loadDump("/mnt/mysql_dump")
 ```
-
-#### If you get error [53025](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-load-dump.html#mysql-shell-utilities-load-dump-errors)
-
-add global variable in MySQL
-```
-set global local_infile=ON;
-```
