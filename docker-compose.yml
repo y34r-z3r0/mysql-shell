@@ -37,5 +37,5 @@ volumes:
 
 networks:
  y34rz3r0_network:
-    name:   y34rz4r0_network
+    name:   y34rz3r0_network
     driver: bridge
