@@ -1,6 +1,6 @@
 version: '2.4'
 services:
-  ugr-mysql:
+  master-mysql:
     extends:
       file:    extends/mysql.yml
       service: mysql
@@ -13,7 +13,7 @@ services:
       target: /var/lib/mysql
     networks: ['y34rz3r0_network']
 
-  iva-mysql:
+  slave-mysql:
     extends:
       file:    extends/mysql.yml
       service: mysql
