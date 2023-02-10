@@ -3,9 +3,9 @@ services:
   mysql:
     image: mysql:8.0.32
     environment: 
-      MYSQL_DATABASE:      y34rz4r0
+      MYSQL_DATABASE:      y34rz3r0
       MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_USER:          y34rz4r0
+      MYSQL_USER:          y34rz3r0
       MYSQL_PASSWORD:      1234
     volumes:
     - type: bind
