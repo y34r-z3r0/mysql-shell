@@ -9,15 +9,14 @@
 - [X] Recovery
 - [X] Check Database Table
 - [ ] Authomatisation by cron (?)
-- [ ] All Diagnostics (?)
 
-+ [Cluster]()
-+ [Cluster Crash Test]()
-+ [Create Test Data]()
-+ [Dump]()
-+ [Remove Test Data]()
-+ [Recovery]()
-+ [Check Test Data]()
++ [Cluster](https://github.com/y34r-z3r0/mysql-shell#cluster)
++ Cluster Crash Test
++ [Create Test Data](https://github.com/y34r-z3r0/mysql-shell#create-test-data)
++ [Dump](https://github.com/y34r-z3r0/mysql-shell#dump)
++ [Remove Test Data](https://github.com/y34r-z3r0/mysql-shell#remove-test-data)
++ [Recovery](https://github.com/y34r-z3r0/mysql-shell#recovery)
++ [Check Test Data](https://github.com/y34r-z3r0/mysql-shell#check-test-data)
 
 # Intro
 
