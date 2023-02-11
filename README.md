@@ -11,6 +11,14 @@
 - [ ] Authomatisation by cron (?)
 - [ ] All Diagnostics (?)
 
++ [Cluster]()
++ [Cluster Crash Test]()
++ [Create Test Data]()
++ [Dump]()
++ [Remove Test Data]()
++ [Recovery]()
++ [Check Test Data]()
+
 # Intro
 
 Here we looked at a really great MySQL infrastructure solution management using JavaScript for clustering instances and backing up data backuping.
@@ -90,7 +98,7 @@ cluster.describe();
 cluster.status();
 ```
 
-# Create Test Table
+# Create Test Data
 
 Connect to MySQL
 
@@ -172,7 +180,7 @@ util.dumpInstance("/mnt/mysql_dump", {dryRun: true, ocimds: true, compatibility:
 util.dumpInstance("/mnt/mysql_dump", {compression: "gzip", ocimds: true, compatibility: ["strip_restricted_grants"]})
 ```
 
-# Drop Test Table or Database
+# Remove Test Data
 
 <sub> keep in mind that we have dumped the whole instance, so you can delete either the table or the whole database </sub>
 
@@ -221,7 +229,7 @@ util.loadDump("/mnt/mysql_dump", {dryRun: true})
 util.loadDump("/mnt/mysql_dump")
 ```
 
-# Check Database and Table
+# Check Test Data
 
 Check database
 
