@@ -1,6 +1,6 @@
 # MySQL Shell (aka mysqlsh)
 
-- [ ] MySQL Shell Method Description 
+- [ ] Intro
 - [X] Cluster
 - [ ] Cluster Crash Test
 - [X] Create Test Database Table
