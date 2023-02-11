@@ -20,7 +20,7 @@
 
 # Intro
 
-Here we looked at a really great MySQL infrastructure solution management using JavaScript for clustering instances and backing up data backuping.
+Here we looked at a really great MySQL infrastructure solution management using JavaScript for clustering instances and data backuping.
 
 I express special gratitude to my colleague and mentor @github/vic-pay for help and support in the implementation of this project.
 
