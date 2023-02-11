@@ -1,6 +1,6 @@
 # MySQL Shell (aka mysqlsh)
 
-- [ ] Intro
+- [X] Intro
 - [X] Cluster
 - [ ] Cluster Crash Test
 - [X] Create Test Database Table
@@ -10,6 +10,12 @@
 - [X] Check Database Table
 - [ ] Authomatisation by cron (?)
 - [ ] All Diagnostics (?)
+
+# Intro
+
+Here we looked at a really great MySQL infrastructure solution management using JavaScript for clustering instances and backing up data.
+
+I express special gratitude to my colleague and mentor @github/vic-pay for help and support in the implementation of this project.
 
 # Cluster
 
