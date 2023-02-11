@@ -8,7 +8,7 @@
 - [X] Remove Test Database or Table
 - [X] Recovery
 - [X] Check Database Table
-- [ ] Authomatisation by cron (?)
+- [ ] Dump Authomatisation
 
 + [Cluster](https://github.com/y34r-z3r0/mysql-shell#cluster)
 + Cluster Crash Test
@@ -17,6 +17,7 @@
 + [Remove Test Data](https://github.com/y34r-z3r0/mysql-shell#remove-test-data)
 + [Recovery](https://github.com/y34r-z3r0/mysql-shell#recovery)
 + [Check Test Data](https://github.com/y34r-z3r0/mysql-shell#check-test-data)
++ Dump Authomatisation
 
 # Intro
 
