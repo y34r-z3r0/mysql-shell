@@ -237,7 +237,7 @@ Check database
 show databases;
 ```
 
-Check table;
+Check table
 
 ```
 show tables;
