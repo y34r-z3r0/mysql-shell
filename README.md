@@ -8,7 +8,7 @@
 - [X] Remove Test Database or Table
 - [X] Recovery
 - [X] Check Database Table
-- [ ] Dump Authomatisation
+- [X] Dump Authomatisation
 
 + [Cluster](https://github.com/y34r-z3r0/mysql-shell#cluster)
 + Cluster Crash Test
@@ -247,4 +247,33 @@ Check data
 
 ```
 select * from music_services;
+```
+
+# Dump Authomatisation
+
+```
+#/bin/bash
+
+# check if directories exist and create if they don't exist
+if ! [ -d /mnt/dump_logs ]; then
+    mkdir /mnt/dump_logs
+fi
+
+if ! [ -d /mnt/dump_archive ]; then
+    mkdir /mnt/dump_archive
+fi
+
+if ! [ -d /mnt/mysql_dump ]; then
+    mkdir /mnt/mysql_dump
+fi
+
+# dump
+docker exec slave-mysql mysqlsh --execute 'util.dumpInstance("/mnt/mysql_dump", {compression: "gzip", ocimds: true, compatibility: ["strip_restricted_grants", "strip_definers"]})' > /mnt/dump_logs/$(date +%d-%m-%Y).log 2>&1
+# zip the dump and move it to the directory with the dump archive
+zip -m /mnt/dump_archive/$(date +%d-%m-%Y).zip /mnt/mysql_dump/* > /dev/null 2>&1
+
+# delete dump archive and logs that is older than 30 days
+find /mnt/dump_archive/ -type f -mtime +30 -exec rm -rf {} \;
+find /mnt/dump_logs/ -type f -mtime +30 -exec rm -rf {} \;
+
 ```
