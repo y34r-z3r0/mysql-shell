@@ -252,6 +252,10 @@ select * from music_services;
 # Dump Authomatisation
 
 ```
+0 2 * * * /bin/bash /opt/mysqldump.sh
+```
+
+```
 #/bin/bash
 
 # check if directories exist and create if they don't exist
