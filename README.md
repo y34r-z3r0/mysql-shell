@@ -157,6 +157,7 @@ Options
 + `ocimds: true` - display information about checks and modifications for compatibility with MySQL Database Service.
 
 + `compatibility: ["strip_restricted_grants"]` - remove specific privileges that are restricted by MySQL Database Service from `GRANT` statements, so users and their roles cannot be given these privileges (which would cause user creation to fail). 
++ `compatibility: ["strip_definers"]` - remove the DEFINER clause from views, routines, events, and triggers, so these objects are created with the default definer (the user invoking the schema), and change the SQL SECURITY clause for views and routines to specify INVOKER instead of DEFINER. MySQL Database Service requires special privileges to create these objects with a definer other than the user loading the schema.
 
 <sub> you can choose whether or not to lock the instance for backup during the dump for data consistency by the "consistent" option. </sub>
 
@@ -169,7 +170,7 @@ All options [here](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-util
 <sub>the target directory must be empty before the export takes place.</sub>
 
 ```
-util.dumpInstance("/mnt/mysql_dump", {dryRun: true, ocimds: true, compatibility: ["strip_restricted_grants"]})
+util.dumpInstance("/mnt/mysql_dump", {dryRun: true, ocimds: true, compatibility: ["strip_restricted_grants", "strip_definers"]})
 ```
 
 **Run**
@@ -177,7 +178,7 @@ util.dumpInstance("/mnt/mysql_dump", {dryRun: true, ocimds: true, compatibility:
 <sub>if the directory does not yet exist in its parent directory, the utility creates it.</sub>
 
 ```
-util.dumpInstance("/mnt/mysql_dump", {compression: "gzip", ocimds: true, compatibility: ["strip_restricted_grants"]})
+util.dumpInstance("/mnt/mysql_dump", {compression: "gzip", ocimds: true, compatibility: ["strip_restricted_grants", "strip_definers"]})
 ```
 
 # Remove Test Data
